@@ -23,8 +23,6 @@
 </head>
 
 <body id="page-top">
-    @RenderBody()
-
 <!-- Page Wrapper -->
     <div id="wrapper">
 <!-- Sidebar -->
@@ -177,10 +175,7 @@
                         </li>
 
                     </ul>
-
                 </nav>
-
-                            
                                 <div class="col-lg-6 mb-4">
                                     <div class="card bg-dark text-white shadow">
                                         <div class="card-body">
@@ -189,15 +184,12 @@
                                         </div>
                                     </div>
                                 </div>
+                                @RenderBody()
                             </div>
-
                         </div>
-
                 <!-- /.container-fluid -->
-
             </div>
             <!-- End of Main Content -->
-
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
@@ -255,5 +247,6 @@
     <!-- Page level custom scripts -->
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
